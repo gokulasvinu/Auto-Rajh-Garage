@@ -8,7 +8,6 @@ const DataManager = {
                     id: 1,
                     name: 'Oil Change',
                     description: 'Complete oil change service with premium oil and filter replacement.',
-                    price: 49.99,
                     category: 'Maintenance',
                     image: 'https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=400&h=300&fit=crop'
                 },
@@ -16,7 +15,6 @@ const DataManager = {
                     id: 2,
                     name: 'Brake Service',
                     description: 'Professional brake inspection and repair service.',
-                    price: 149.99,
                     category: 'Brakes',
                     image: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400&h=300&fit=crop'
                 },
@@ -24,31 +22,62 @@ const DataManager = {
                     id: 3,
                     name: 'Tire Replacement',
                     description: 'Tire installation and balancing service.',
-                    price: 199.99,
                     category: 'Tires',
                     image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop'
                 },
                 {
                     id: 4,
+                    name: 'Windshield Wiper Blades',
+                    description: 'Professional windshield wiper blade replacement for clear visibility in all weather conditions.',
+                    category: 'Maintenance',
+                    image: 'https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=400&h=300&fit=crop'
+                },
+                {
+                    id: 5,
+                    name: 'Fluid Services',
+                    description: 'Complete fluid check and replacement including brake fluid, transmission fluid, coolant, and power steering fluid.',
+                    category: 'Maintenance',
+                    image: 'https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=400&h=300&fit=crop'
+                },
+                {
+                    id: 6,
+                    name: 'Trip Inspections',
+                    description: 'Comprehensive pre-trip vehicle inspection to ensure your vehicle is road-ready for long journeys.',
+                    category: 'Inspection',
+                    image: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400&h=300&fit=crop'
+                },
+                {
+                    id: 7,
+                    name: 'Maintenance Inspections',
+                    description: 'Regular maintenance inspections to keep your vehicle running smoothly and prevent costly repairs.',
+                    category: 'Inspection',
+                    image: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=400&h=300&fit=crop'
+                },
+                {
+                    id: 8,
+                    name: 'Check Engine Light Diagnostics',
+                    description: 'Advanced diagnostic services to identify and resolve check engine light issues using professional equipment.',
+                    category: 'Diagnostics',
+                    image: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=400&h=300&fit=crop'
+                },
+                {
+                    id: 9,
                     name: 'Engine Repair',
                     description: 'Complete engine diagnostics and repair services.',
-                    price: 299.99,
                     category: 'Engine',
                     image: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=400&h=300&fit=crop'
                 },
                 {
-                    id: 5,
+                    id: 10,
                     name: 'AC Service',
                     description: 'Air conditioning system repair and recharge.',
-                    price: 129.99,
                     category: 'HVAC',
                     image: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=400&h=300&fit=crop'
                 },
                 {
-                    id: 6,
+                    id: 11,
                     name: 'Body Work',
                     description: 'Professional auto body repair and paint services.',
-                    price: 399.99,
                     category: 'Body',
                     image: 'https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=400&h=300&fit=crop'
                 }
@@ -62,7 +91,6 @@ const DataManager = {
                     id: 1,
                     name: 'Engine Oil - Premium',
                     description: 'High-quality synthetic engine oil for optimal performance.',
-                    price: 29.99,
                     stock: 50,
                     image: 'https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=400&h=300&fit=crop'
                 },
@@ -70,7 +98,6 @@ const DataManager = {
                     id: 2,
                     name: 'Brake Pads Set',
                     description: 'Premium brake pads for reliable stopping power.',
-                    price: 79.99,
                     stock: 30,
                     image: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400&h=300&fit=crop'
                 },
@@ -78,7 +105,6 @@ const DataManager = {
                     id: 3,
                     name: 'Air Filter',
                     description: 'High-performance air filter for better engine efficiency.',
-                    price: 24.99,
                     stock: 40,
                     image: 'https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=400&h=300&fit=crop'
                 },
@@ -86,7 +112,6 @@ const DataManager = {
                     id: 4,
                     name: 'Car Battery',
                     description: 'Long-lasting automotive battery with warranty.',
-                    price: 149.99,
                     stock: 25,
                     image: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=400&h=300&fit=crop'
                 },
@@ -94,7 +119,6 @@ const DataManager = {
                     id: 5,
                     name: 'Spark Plugs Set',
                     description: 'Premium spark plugs for improved engine performance.',
-                    price: 39.99,
                     stock: 60,
                     image: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=400&h=300&fit=crop'
                 },
@@ -102,7 +126,6 @@ const DataManager = {
                     id: 6,
                     name: 'Windshield Wipers',
                     description: 'High-quality windshield wiper blades for clear visibility.',
-                    price: 34.99,
                     stock: 45,
                     image: 'https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=400&h=300&fit=crop'
                 }
@@ -240,7 +263,6 @@ const ServicesDisplay = {
                     <h3>${service.name}</h3>
                     <p>${service.description}</p>
                     ${service.category ? `<p><strong>Category:</strong> ${service.category}</p>` : ''}
-                    <div class="service-price">$${parseFloat(service.price).toFixed(2)}</div>
                 </div>
             </div>
         `;
@@ -274,7 +296,6 @@ const ProductsDisplay = {
                 <div class="product-card-content">
                     <h3>${product.name}</h3>
                     <p>${product.description}</p>
-                    <div class="product-price">$${parseFloat(product.price).toFixed(2)}</div>
                     <div class="product-stock ${stockClass}">${stockText}</div>
                 </div>
             </div>

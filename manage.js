@@ -114,7 +114,6 @@ const ServicesManager = {
                 <div class="manage-item-info">
                     <h3>${service.name}</h3>
                     <p>${service.description}</p>
-                    <p><strong>Price:</strong> $${parseFloat(service.price).toFixed(2)}</p>
                     ${service.category ? `<p><strong>Category:</strong> ${service.category}</p>` : ''}
                 </div>
                 <div class="manage-item-actions">
@@ -136,7 +135,6 @@ const ServicesManager = {
                 document.getElementById('serviceId').value = service.id;
                 document.getElementById('serviceName').value = service.name;
                 document.getElementById('serviceDescription').value = service.description;
-                document.getElementById('servicePrice').value = service.price;
                 document.getElementById('serviceCategory').value = service.category || '';
                 document.getElementById('serviceImageUrl').value = service.image || '';
                 if (service.image) {
@@ -166,12 +164,11 @@ const ServicesManager = {
         const id = document.getElementById('serviceId').value;
         const name = document.getElementById('serviceName').value;
         const description = document.getElementById('serviceDescription').value;
-        const price = parseFloat(document.getElementById('servicePrice').value);
         const category = document.getElementById('serviceCategory').value;
         const imageInput = document.getElementById('serviceImage');
         const imageUrlInput = document.getElementById('serviceImageUrl');
 
-        if (!name || !description || !price) {
+        if (!name || !description) {
             alert('Please fill in all required fields.');
             return;
         }
@@ -187,7 +184,6 @@ const ServicesManager = {
             if (service) {
                 service.name = name;
                 service.description = description;
-                service.price = price;
                 service.category = category || '';
                 if (image) service.image = image;
             }
@@ -198,7 +194,6 @@ const ServicesManager = {
                 id: newId,
                 name,
                 description,
-                price,
                 category: category || '',
                 image: image || 'https://via.placeholder.com/400x200?text=Service'
             };
@@ -309,7 +304,6 @@ const ProductsManager = {
                 <div class="manage-item-info">
                     <h3>${product.name}</h3>
                     <p>${product.description}</p>
-                    <p><strong>Price:</strong> $${parseFloat(product.price).toFixed(2)}</p>
                     <p><strong>Stock:</strong> ${product.stock} units</p>
                 </div>
                 <div class="manage-item-actions">
@@ -331,7 +325,6 @@ const ProductsManager = {
                 document.getElementById('productId').value = product.id;
                 document.getElementById('productName').value = product.name;
                 document.getElementById('productDescription').value = product.description;
-                document.getElementById('productPrice').value = product.price;
                 document.getElementById('productStock').value = product.stock;
                 document.getElementById('productImageUrl').value = product.image || '';
                 if (product.image) {
@@ -361,12 +354,11 @@ const ProductsManager = {
         const id = document.getElementById('productId').value;
         const name = document.getElementById('productName').value;
         const description = document.getElementById('productDescription').value;
-        const price = parseFloat(document.getElementById('productPrice').value);
         const stock = parseInt(document.getElementById('productStock').value);
         const imageInput = document.getElementById('productImage');
         const imageUrlInput = document.getElementById('productImageUrl');
 
-        if (!name || !description || !price || stock < 0) {
+        if (!name || !description || stock < 0) {
             alert('Please fill in all required fields with valid values.');
             return;
         }
@@ -382,7 +374,6 @@ const ProductsManager = {
             if (product) {
                 product.name = name;
                 product.description = description;
-                product.price = price;
                 product.stock = stock;
                 if (image) product.image = image;
             }
@@ -393,7 +384,6 @@ const ProductsManager = {
                 id: newId,
                 name,
                 description,
-                price,
                 stock,
                 image: image || 'https://via.placeholder.com/400x200?text=Product'
             };
